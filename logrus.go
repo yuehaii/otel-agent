@@ -159,3 +159,7 @@ func otelLogger(level string, format string, args ...interface{}) bool {
 	}
 	return true
 }
+
+func main() {
+	Infof("Otel agent main func")
+}
