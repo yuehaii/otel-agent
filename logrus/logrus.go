@@ -160,8 +160,10 @@ func otelLogger(level string, format string, args ...interface{}) bool {
 	return true
 }
 
+type Entry = sirupsen_logrus.Entry
 type Logger = sirupsen_logrus.Logger
 type JSONFormatter = sirupsen_logrus.JSONFormatter
+type TextFormatter = sirupsen_logrus.TextFormatter
 type Level = sirupsen_logrus.Level
 
 var (
