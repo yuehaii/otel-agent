@@ -1,5 +1,4 @@
-package logrus
+package main
 
 func main() {
-	Infof("Otel agent main func")
 }
