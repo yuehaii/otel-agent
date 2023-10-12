@@ -1,4 +1,4 @@
-module github.com/yuehaii/otel-agent
+module github.com/yuehaii/otel-agent/logrus
 
 go 1.21.1
 
