@@ -159,3 +159,14 @@ func otelLogger(level string, format string, args ...interface{}) bool {
 	}
 	return true
 }
+
+type Logger = sirupsen_logrus.Logger
+
+var (
+	StandardLogger  = sirupsen_logrus.StandardLogger
+	SetLevel        = sirupsen_logrus.SetLevel
+	SetFormatter    = sirupsen_logrus.SetFormatter
+	SetReportCaller = sirupsen_logrus.SetReportCaller
+	SetOutput       = sirupsen_logrus.SetOutput
+	WithContext     = sirupsen_logrus.WithContext
+)
