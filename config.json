@@ -1,0 +1,111 @@
+{
+    "agent": {
+      "Name": "otel-agent",
+      "host": "otel.context.cn",
+      "port": "443",
+	  "defautPort": "4318"
+    },
+	"trace": {
+		"path": "/v1/traces",
+		"protocol": "http",
+		"ref": "https://github.com/open-telemetry/opentelemetry-proto/blob/main/examples/trace.json"
+	},
+	"metric": {
+		"path": "/v1/metrics",
+		"protocol": "http",
+		"ref": "https://github.com/open-telemetry/opentelemetry-proto/blob/main/examples/metrics.json"
+	},
+    "log": {
+      "path": "/v1/logs",
+      "protocol": "http",
+	  "ref": "https://github.com/open-telemetry/opentelemetry-proto/blob/main/examples/logs.json",
+      "logbody": {
+		"resourceLogs": [
+			{
+			  "resource": {
+				"attributes": [ 
+				  {
+					"key": "service.name",
+					"value": {
+					  "stringValue": "labrador-service"
+					}
+				  },
+				  {
+					"key": "labrador_component",
+					"value": {
+					  "stringValue": "ali-cloud-exporter"
+					}
+				  }, 
+				  {
+					"key": "labrador_trace_id",
+					"value": {
+					  "stringValue": ""
+					}
+				  },
+				  {
+					"key": "labrador_span_id",
+					"value": {
+					  "stringValue": ""
+					}
+				  },
+				  {
+					"key": "labrador_request_key",
+					"value": {
+					  "stringValue": ""
+					}
+				  },
+				  {
+					"key": "labrador_response_key",
+					"value": {
+					  "stringValue": ""
+					}
+				  },
+				  {
+					"key": "labrador_stack_key",
+					"value": {
+					  "stringValue": ""
+					}
+				  },
+				  {
+					"key": "labrador_log_level",
+					"value": {
+					  "stringValue": ""
+					}
+				  },
+				  {
+					"key": "labrador_err_code",
+					"value": {
+					  "stringValue": ""
+					}
+				  }
+				]
+			  },
+			  "scopeLogs": [
+				{
+				  "scope": {
+					"name": "otel-agent",
+					"version": "1.0.0",
+					"attributes": [
+					]
+				  },
+				  "logRecords": [
+					{
+					  "timeUnixNano": "",  
+					  "observedTimeUnixNano": "",
+					  "severityText": "Information",
+					  "traceId": "",
+					  "spanId": "",
+					  "body": {
+						"stringValue": "body=\"Hej!\""
+					  },
+					  "attributes": [ 
+					  ]
+					}
+				  ]
+				}
+			  ]
+			}
+		  ]
+      }
+    }
+  }
